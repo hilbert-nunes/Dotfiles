@@ -1,0 +1,18 @@
+[package]
+name = "zoneinfo_compiled"
+description = "Library for parsing compiled zoneinfo files"
+
+authors = ["Benjamin Sago <ogham@bsago.me>"]
+documentation = "https://docs.rs/zoneinfo_compiled/"
+exclude = ["/.rustfmt.toml", "/.travis.yml"]
+license = "MIT"
+repository = "https://github.com/rust-datetime/zoneinfo-compiled/"
+readme = "README.md"
+version = "0.5.1"
+
+[lib]
+name = "zoneinfo_compiled"
+
+[dependencies]
+byteorder = "1.0"
+datetime = { version = "0.5.2", default_features = false }

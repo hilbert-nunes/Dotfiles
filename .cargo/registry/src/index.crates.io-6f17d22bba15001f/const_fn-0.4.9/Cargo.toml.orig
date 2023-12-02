@@ -1,0 +1,22 @@
+[package]
+name = "const_fn"
+version = "0.4.9"
+edition = "2018"
+rust-version = "1.31"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/taiki-e/const_fn"
+keywords = ["macros", "attribute", "const", "static"]
+categories = ["no-std", "rust-patterns"]
+exclude = ["/.*", "/tools"]
+description = """
+An attribute for easy generation of const functions with conditional compilations.
+"""
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[workspace]
+members = ["test_suite"]
+
+[lib]
+proc-macro = true

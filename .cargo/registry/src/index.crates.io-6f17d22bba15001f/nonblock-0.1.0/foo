@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo foo
+sleep 2
+echo going to error >&2
+echo prepare for the bars
+BAR=()
+for i in `seq 10`; do
+  BAR+="$i barbarbarbarbarbarbarbarbarbarbarbarbarbarbar\n"
+done;
+echo -e $BAR
+sleep 1
+echo baz
+

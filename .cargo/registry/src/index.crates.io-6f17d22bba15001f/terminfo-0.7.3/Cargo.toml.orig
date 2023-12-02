@@ -1,0 +1,23 @@
+[package]
+name    = "terminfo"
+version = "0.7.3"
+edition = "2018"
+
+authors = ["meh. <meh@schizofreni.co>"]
+license = "WTFPL"
+
+description = "Terminal information."
+repository  = "https://github.com/meh/rust-terminfo"
+keywords    = ["terminal", "terminfo", "termcap", "term"]
+categories  = ["command-line-interface"]
+
+build = "build.rs"
+
+[dependencies]
+dirs = "2"
+nom = { version = "5.0", default-features = false, features = ["std"] }
+phf = "0.8"
+fnv = "1.0"
+
+[build-dependencies]
+phf_codegen = "0.8"

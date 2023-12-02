@@ -1,0 +1,11 @@
+[package]
+
+name = "unsafe-any-ors"
+version = "1.0.0"
+authors = ["Jonathan Reem <jonathan.reem@gmail.com>", "anton whalley anton@venshare.com"]
+description = "Traits and implementations for unchecked downcasting."
+repository = "https://github.com/orphanage-rs/rust-unsafe-any"
+license = "MIT"
+
+[dependencies]
+destructure_traitobject = "0.2.0"

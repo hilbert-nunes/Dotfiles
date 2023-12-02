@@ -1,0 +1,135 @@
+#
+# Copyright © 2019-today Peter M. Stahl pemistahl@gmail.com
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Rust Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Cargo.lock'
+      - 'Cargo.toml'
+      - 'src/**'
+      - 'tests/**'
+      - '**.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Cargo.lock'
+      - 'Cargo.toml'
+      - 'src/**'
+      - 'tests/**'
+      - '**.yml'
+
+jobs:
+  rust-build:
+    name: Rust on ${{ matrix.name }}
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            name: Linux 64-Bit
+            target: x86_64-unknown-linux-musl
+
+          - os: macos-latest
+            name: MacOS 64-Bit
+            target: x86_64-apple-darwin
+            env:
+              MACOSX_DEPLOYMENT_TARGET: 10.7
+
+          - os: windows-latest
+            name: Windows 64-Bit
+            target: x86_64-pc-windows-msvc
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Add rustup target
+        run: rustup target add ${{ matrix.target }}
+
+      - name: Install apt packages
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: sudo apt-get install musl-tools libssl-dev
+
+      # needed to fix file corruption of cache
+      # https://github.com/actions/cache/issues/403
+      - name: Install GNU tar
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: |
+          brew install gnu-tar
+          echo "/usr/local/opt/gnu-tar/libexec/gnubin" >> $GITHUB_PATH
+
+      - name: Install wasm-pack
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Enable Safari web driver
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: sudo safaridriver --enable
+
+      - name: Store or retrieve cargo caches
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Build target in debug mode
+        run: cargo build --target ${{ matrix.target }} --locked
+
+      - name: Test default target in debug mode
+        run: cargo test --target ${{ matrix.target }}
+
+      - name: Run WASM integration tests on NodeJS
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: wasm-pack test --node -- --no-default-features
+
+      - name: Run WASM integration tests in Chrome
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: wasm-pack test --headless --chrome -- --no-default-features
+
+      - name: Run WASM integration tests in Firefox
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: wasm-pack test --headless --firefox -- --no-default-features
+
+      - name: Run WASM integration tests in Safari
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: wasm-pack test --headless --safari -- --no-default-features
+
+      - name: Create code coverage report
+        if: ${{ matrix.os == 'ubuntu-latest' && github.event_name == 'push' }}
+        # NOTE: actions-rs is unmaintained, using fork with fix for update to node 16
+        #       https://github.com/actions-rs/tarpaulin/pull/22
+        uses: FreeMasen/tarpaulin-action@9f7e03f06fea8f374c85a95c2ecff6a4d5805845
+        with:
+          version: '0.22.0'
+          args: '--ignore-config --ignore-panics --ignore-tests --exclude-files src/main.rs src/wasm.rs'
+          timeout: 900 # increase timeout for long-running property tests
+
+      - name: Upload code coverage report to Codecov
+        if: ${{ matrix.os == 'ubuntu-latest' && github.event_name == 'push' }}
+        uses: codecov/codecov-action@v3

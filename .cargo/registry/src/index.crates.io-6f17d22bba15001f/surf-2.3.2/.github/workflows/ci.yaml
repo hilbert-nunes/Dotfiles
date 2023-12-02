@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - staging
+      - trying
+
+env:
+  RUSTFLAGS: -Dwarnings
+
+jobs:
+  build_and_test:
+    name: Build and test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        rust: [nightly]
+        backend: [curl-client, h1-client, h1-client-rustls, hyper-client]
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install ${{ matrix.rust }}
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: ${{ matrix.rust }}
+        override: true
+
+    - name: check no features
+      uses: actions-rs/cargo@v1
+      with:
+        command: check
+        args: --no-default-features
+
+    - name: check
+      uses: actions-rs/cargo@v1
+      with:
+        command: check
+        args: --benches --bins --examples --tests --no-default-features --features '${{ matrix.backend }} middleware-logger encoding'
+
+    - name: tests
+      uses: actions-rs/cargo@v1
+      with:
+        command: test
+        args: --no-default-features --features '${{ matrix.backend }} middleware-logger encoding'
+
+  test_wasm:
+    name: Test wasm
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install
+      run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+    - name: Chrome
+      run: wasm-pack test --headless --chrome
+      working-directory: wasm-test
+
+    - name: Firefox
+      run: wasm-pack test --headless --firefox
+      working-directory: wasm-test
+
+  check_fmt_clippy_docs:
+    name: Checking fmt, clippy, and docs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install nightly for docs
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: nightly
+        override: true
+        components: rustfmt, clippy, rust-docs
+
+    - name: clippy
+      run: cargo clippy --benches --bins --examples --tests -- -D warnings
+
+    - name: fmt
+      run: cargo fmt --all -- --check
+
+    - name: docs
+      run: cargo doc --no-deps
+
+  check_features:
+    name: Check feature combinations
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install cargo-hack
+      run: cargo install cargo-hack
+
+    - name: Check all feature combinations works properly
+      # * `--feature-powerset` - run for the feature powerset of the package
+      # * `--no-dev-deps` - build without dev-dependencies to avoid https://github.com/rust-lang/cargo/issues/4866
+      run: cargo hack check --feature-powerset --no-dev-deps --skip=default-client,wasm-client --skip=h1-client,h1-client-rustls

@@ -1,0 +1,82 @@
+name "adamant-triceratops"
+tabs {
+    tab {
+        position 0
+        name "Tab #1"
+        active false
+        panes_to_hide 0
+        is_fullscreen_active false
+        is_sync_panes_active false
+        are_floating_panes_visible false
+        is_swap_layout_dirty false
+    }
+}
+panes {
+    pane {
+        id 0
+        is_plugin false
+        is_focused true
+        is_fullscreen false
+        is_floating false
+        is_suppressed false
+        title "Pane #1"
+        exited false
+        is_held false
+        pane_x 0
+        pane_content_x 1
+        pane_y 1
+        pane_content_y 2
+        pane_rows 48
+        pane_content_rows 46
+        pane_columns 209
+        pane_content_columns 207
+        cursor_coordinates_in_pane 5 2
+        is_selectable true
+        tab_position 0
+    }
+    pane {
+        id 0
+        is_plugin true
+        is_focused false
+        is_fullscreen false
+        is_floating false
+        is_suppressed false
+        title "tab-bar"
+        exited false
+        is_held false
+        pane_x 0
+        pane_content_x 0
+        pane_y 0
+        pane_content_y 0
+        pane_rows 1
+        pane_content_rows 1
+        pane_columns 209
+        pane_content_columns 209
+        plugin_url "tab-bar"
+        is_selectable false
+        tab_position 0
+    }
+    pane {
+        id 1
+        is_plugin true
+        is_focused false
+        is_fullscreen false
+        is_floating false
+        is_suppressed false
+        title "status-bar"
+        exited false
+        is_held false
+        pane_x 0
+        pane_content_x 0
+        pane_y 49
+        pane_content_y 49
+        pane_rows 2
+        pane_content_rows 2
+        pane_columns 209
+        pane_content_columns 209
+        plugin_url "status-bar"
+        is_selectable false
+        tab_position 0
+    }
+}
+connected_clients 0

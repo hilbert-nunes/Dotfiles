@@ -1,0 +1,6 @@
+{
+  "git": {
+    "sha1": "44a2bf8148932590479bd64b9f90502b14c3b0d3"
+  },
+  "path_in_vcs": "crates/gen-core"
+}

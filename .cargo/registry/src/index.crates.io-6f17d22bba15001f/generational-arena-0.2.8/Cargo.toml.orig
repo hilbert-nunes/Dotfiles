@@ -1,0 +1,37 @@
+[package]
+authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
+categories = ["memory-management", "no-std", "rust-patterns", "data-structures"]
+description = "A safe arena allocator that supports deletion without suffering from the ABA problem by using generational indices."
+keywords = ["generation", "index", "arena", "ecs"]
+license = "MPL-2.0"
+name = "generational-arena"
+readme = "./README.md"
+repository = "https://github.com/fitzgen/generational-arena"
+version = "0.2.8"
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "fitzgen/generational-arena" }
+
+[dependencies]
+cfg-if = "0.1.10"
+serde = { version = "1.0.102", optional = true, default-features = false }
+
+[dev-dependencies]
+quickcheck = "0.9.0"
+criterion = "0.3.0"
+serde_test = "1.0.102"
+bincode = "1.2.0"
+serde = { version = "1.0.102", default-features = false, features = ["derive"] }
+
+[[bench]]
+name = "benches"
+path = "benches/benches.rs"
+harness = false
+
+[features]
+default = ["std"]
+std = []
+
+[profile.bench]
+debug = true

@@ -1,0 +1,37 @@
+[package]
+name = "datetime"
+description = "Library for date and time formatting and arithmetic"
+
+authors = [ "Benjamin Sago <ogham@bsago.me>", "Hendrik Sollich <hendrik@hoodie.de>" ]
+documentation = "https://docs.rs/datetime"
+exclude = ["/.rustfmt.toml", "/.travis.yml"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rust-datetime/datetime"
+version = "0.5.2"
+
+
+[lib]
+name = "datetime"
+
+
+[dependencies]
+libc = "0.2"
+
+pad = { version = "0.1", optional = true }
+locale = { version = "0.2", optional = true }
+iso8601 = { version = "0.3.0", optional = true }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.8", features = ["sysinfoapi", "minwindef"] }
+
+[target.'cfg(target_os = "redox")'.dependencies]
+redox_syscall = "0.1.29"
+
+[features]
+default = [ "format", "parse" ]
+format = [ "pad", "locale" ]
+parse = [ "iso8601" ]
+
+[dev-dependencies]
+rustc-serialize = "0.3"

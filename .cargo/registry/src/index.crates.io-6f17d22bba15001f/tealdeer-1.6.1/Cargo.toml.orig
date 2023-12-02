@@ -1,0 +1,54 @@
+[package]
+authors = [
+    "Danilo Bargen <mail@dbrgn.ch>",
+    "Niklas Mohrin <dev@niklasmohrin.de>",
+]
+description = "Fetch and show tldr help pages for many CLI commands. Full featured offline client with caching support."
+homepage = "https://github.com/dbrgn/tealdeer/"
+license = "MIT/Apache-2.0"
+name = "tealdeer"
+readme = "README.md"
+repository = "https://github.com/dbrgn/tealdeer/"
+documentation = "https://dbrgn.github.io/tealdeer/"
+version = "1.6.1"
+include = ["/src/**/*", "/tests/**/*", "/Cargo.toml", "/README.md", "/LICENSE-*", "/screenshot.png"]
+rust-version = "1.62"
+edition = "2021"
+
+[[bin]]
+name = "tldr"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+app_dirs = { version = "2", package = "app_dirs2" }
+atty = "0.2"
+clap = { version = "3", features = ["std", "derive", "suggestions", "color"], default-features = false }
+env_logger = { version = "0.9", optional = true }
+log = "0.4"
+reqwest = { version = "0.11.3", features = ["blocking"], default-features = false }
+serde = "1.0.21"
+serde_derive = "1.0.21"
+toml = "0.5.1"
+walkdir = "2.0.1"
+yansi = "0.5"
+zip = { version = "0.6", default-features = false, features = ["deflate"] }
+
+[target.'cfg(not(windows))'.dependencies]
+pager = "0.16"
+
+[dev-dependencies]
+assert_cmd = "2.0.1"
+escargot = "0.5"
+predicates = "2.0.2"
+tempfile = "3.1.0"
+filetime = "0.2.10"
+
+[features]
+default = ["native-roots"]
+native-roots = ["reqwest/rustls-tls-native-roots"]
+webpki-roots = ["reqwest/rustls-tls-webpki-roots"]
+logging = ["env_logger"]
+
+[profile.release]
+lto = true

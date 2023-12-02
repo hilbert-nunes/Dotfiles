@@ -1,0 +1,29 @@
+[package]
+name = "console"
+description = "A terminal and console abstraction for Rust"
+version = "0.9.2"
+keywords = ["cli", "terminal", "colors", "console", "ansi"]
+authors = ["Armin Ronacher <armin.ronacher@active-4.com>"]
+license = "MIT"
+edition = "2018"
+homepage = "https://github.com/mitsuhiko/console"
+repository = "https://github.com/mitsuhiko/console"
+documentation = "https://docs.rs/console"
+readme = "README.md"
+
+[features]
+default = ["unicode-width"]
+
+[dependencies]
+clicolors-control = "1.0.1"
+lazy_static = "1"
+libc = "0.2"
+regex = { version = "1.3.1", default-features = false, features = ["std"] }
+unicode-width = { version = "0.1", optional = true }
+
+[target.'cfg(unix)'.dependencies]
+termios = "0.3"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winbase","winuser","consoleapi","processenv","wincon"] }
+encode_unicode = "0.3"

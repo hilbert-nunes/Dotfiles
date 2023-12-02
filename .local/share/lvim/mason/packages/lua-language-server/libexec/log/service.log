@@ -1,0 +1,753 @@
+[18:30:09.553][info] [#0:/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/main.lua:66]: Lua Lsp startup, root: 	/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec
+[18:30:09.554][info] [#0:/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/main.lua:67]: ROOT:	/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec
+[18:30:09.554][info] [#0:/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/main.lua:68]: LOGPATH:	/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/log
+[18:30:09.554][info] [#0:/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/main.lua:69]: METAPATH:	/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta
+[18:30:09.554][info] [#0:/home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/main.lua:70]: VERSION:	3.7.3
+[18:30:09.609][info] [#0:script/service/service.lua:144]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 1.345 MB
+        # 00 : 1.345 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[18:30:09.613][info] [#0:script/client.lua:657]: Client init	{
+  capabilities = {
+    textDocument = {
+      callHierarchy = {
+        dynamicRegistration = false
+      },
+      codeAction = {
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = { "", "quickfix", "refactor", "refactor.extract", "refactor.inline", "refactor.rewrite", "source", "source.organizeImports" }
+          }
+        },
+        dataSupport = true,
+        dynamicRegistration = false,
+        isPreferredSupport = true,
+        resolveSupport = {
+          properties = { "edit" }
+        }
+      },
+      completion = {
+        completionItem = {
+          commitCharactersSupport = true,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          insertReplaceSupport = true,
+          insertTextModeSupport = {
+            valueSet = { 1, 2 }
+          },
+          labelDetailsSupport = true,
+          preselectSupport = true,
+          resolveSupport = {
+            properties = { "documentation", "detail", "additionalTextEdits" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionItemKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
+        },
+        completionList = {
+          itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = true,
+        dynamicRegistration = false,
+        insertTextMode = 1
+      },
+      declaration = {
+        linkSupport = true
+      },
+      definition = {
+        linkSupport = true
+      },
+      documentHighlight = {
+        dynamicRegistration = false
+      },
+      documentSymbol = {
+        dynamicRegistration = false,
+        hierarchicalDocumentSymbolSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      hover = {
+        contentFormat = { "markdown", "plaintext" },
+        dynamicRegistration = false
+      },
+      implementation = {
+        linkSupport = true
+      },
+      publishDiagnostics = {
+        relatedInformation = true,
+        tagSupport = {
+          valueSet = { 1, 2 }
+        }
+      },
+      references = {
+        dynamicRegistration = false
+      },
+      rename = {
+        dynamicRegistration = false,
+        prepareSupport = true
+      },
+      semanticTokens = {
+        augmentsSyntaxTokens = true,
+        dynamicRegistration = false,
+        formats = { "relative" },
+        multilineTokenSupport = false,
+        overlappingTokenSupport = true,
+        requests = {
+          full = {
+            delta = true
+          },
+          range = false
+        },
+        serverCancelSupport = false,
+        tokenModifiers = { "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async", "modification", "documentation", "defaultLibrary" },
+        tokenTypes = { "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter", "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword", "modifier", "comment", "string", "number", "regexp", "operator", "decorator" }
+      },
+      signatureHelp = {
+        dynamicRegistration = false,
+        signatureInformation = {
+          activeParameterSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          parameterInformation = {
+            labelOffsetSupport = true
+          }
+        }
+      },
+      synchronization = {
+        didSave = true,
+        dynamicRegistration = false,
+        willSave = true,
+        willSaveWaitUntil = true
+      },
+      typeDefinition = {
+        linkSupport = true
+      }
+    },
+    window = {
+      showDocument = {
+        support = true
+      },
+      showMessage = {
+        messageActionItem = {
+          additionalPropertiesSupport = false
+        }
+      },
+      workDoneProgress = true
+    },
+    workspace = {
+      applyEdit = true,
+      configuration = true,
+      didChangeWatchedFiles = {
+        dynamicRegistration = false,
+        relativePatternSupport = true
+      },
+      semanticTokens = {
+        refreshSupport = true
+      },
+      symbol = {
+        dynamicRegistration = false,
+        hierarchicalWorkspaceSymbolSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      workspaceEdit = {
+        resourceOperations = { "rename", "create", "delete" }
+      },
+      workspaceFolders = true
+    }
+  },
+  clientInfo = {
+    name = "Neovim",
+    version = "0.9.4"
+  },
+  initializationOptions = {},
+  processId = 12284,
+  trace = "off"
+}
+[18:30:09.613][info] [#0:script/language.lua:137]: VSC language: nil
+[18:30:09.613][info] [#0:script/language.lua:138]: LS  language: en-us
+[18:30:10.219][info] [#0:script/provider/provider.lua:61]: Load config from client	fallback
+[18:30:10.219][info] [#0:script/provider/provider.lua:62]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = { "/usr/share/nvim/runtime", "/home/hilbert-nunes/.local/share/lunarvim/lvim", "/home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable", "${3rd}/busted/library", "${3rd}/luassert/library", "${3rd}/luv/library" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[18:30:10.219][info] [#0:script/provider/provider.lua:61]: Load config from client	fallback
+[18:30:10.219][info] [#0:script/provider/provider.lua:62]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = { "/usr/share/nvim/runtime", "/home/hilbert-nunes/.local/share/lunarvim/lvim", "/home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable", "${3rd}/busted/library", "${3rd}/luassert/library", "${3rd}/luv/library" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[18:30:10.220][info] [#0:script/provider/provider.lua:61]: Load config from client	fallback
+[18:30:10.220][info] [#0:script/provider/provider.lua:62]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim", "lvim", "reload" }
+    },
+    runtime = {
+      special = {
+        reload = "require"
+      },
+      version = "LuaJIT"
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = { "/usr/share/nvim/runtime", "/home/hilbert-nunes/.local/share/lunarvim/lvim", "/home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable", "${3rd}/busted/library", "${3rd}/luassert/library", "${3rd}/luv/library" },
+      maxPreload = 5000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[18:30:10.321][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[18:30:10.424][info] [#0:script/workspace/workspace.lua:324]: Preload start:	<fallback>
+[18:30:10.430][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table.lua
+[18:30:10.431][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/package.lua
+[18:30:10.431][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/profile.lua
+[18:30:10.431][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/util.lua
+[18:30:10.431][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/new.lua
+[18:30:10.431][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:10.446][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/io.lua
+[18:30:10.446][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:10.447][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:10.448][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/ffi.lua
+[18:30:10.448][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///usr/share/nvim/runtime
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/bit.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/basic.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string/buffer.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/math.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/busted/library
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/os.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/builtin.lua
+[18:30:10.493][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.494][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/debug.lua
+[18:30:10.494][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/clear.lua
+[18:30:10.494][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/coroutine.lua
+[18:30:10.595][info] [#0:script/workspace/workspace.lua:379]: Found 205 files at:	<fallback>
+[18:30:10.595][info] [#0:script/workspace/loading.lua:161]: Load files from disk:	<fallback>
+[18:30:10.599][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/coroutine.lua , size = 2.541 KB
+[18:30:10.609][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/coroutine.lua
+[18:30:10.609][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/clear.lua , size = 0.797 KB
+[18:30:10.611][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/clear.lua
+[18:30:10.612][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/debug.lua , size = 7.310 KB
+[18:30:10.626][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/debug.lua
+[18:30:10.626][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/stub.lua , size = 1.865 KB
+[18:30:10.630][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.630][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/spy.d.lua , size = 4.246 KB
+[18:30:10.641][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.641][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/mock.lua , size = 1.150 KB
+[18:30:10.645][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.645][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/array.lua , size = 0.326 KB
+[18:30:10.646][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.647][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/spy.lua , size = 2.278 KB
+[18:30:10.649][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.649][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert/match.lua , size = 11.840 KB
+[18:30:10.655][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.655][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library/luassert.lua , size = 14.181 KB
+[18:30:10.661][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luassert/library
+[18:30:10.661][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit.lua , size = 0.884 KB
+[18:30:10.662][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit.lua
+[18:30:10.662][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/os.lua , size = 5.600 KB
+[18:30:10.664][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/os.lua
+[18:30:10.664][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/busted/library/busted.lua , size = 6.517 KB
+[18:30:10.666][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/busted/library
+[18:30:10.666][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[18:30:10.666][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/builtin.lua
+[18:30:10.666][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/math.lua , size = 7.949 KB
+[18:30:10.669][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/math.lua
+[18:30:10.669][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string.lua , size = 6.323 KB
+[18:30:10.675][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string.lua
+[18:30:10.675][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string/buffer.lua , size = 18.123 KB
+[18:30:10.678][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/string/buffer.lua
+[18:30:10.678][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/bit.lua , size = 1.320 KB
+[18:30:10.679][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/bit.lua
+[18:30:10.679][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/basic.lua , size = 14.989 KB
+[18:30:10.683][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/basic.lua
+[18:30:10.683][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/plugin/editorconfig.lua , size = 0.410 KB
+[18:30:10.684][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.684][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/syntax/query.lua , size = 0.135 KB
+[18:30:10.684][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.684][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/plugin/nvim.lua , size = 0.639 KB
+[18:30:10.686][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.686][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/plugin/man.lua , size = 0.772 KB
+[18:30:10.687][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.687][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/c.lua , size = 0.031 KB
+[18:30:10.687][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.687][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/cs.lua , size = 0.031 KB
+[18:30:10.687][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.687][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/css.lua , size = 0.031 KB
+[18:30:10.688][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.688][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/query.lua , size = 0.146 KB
+[18:30:10.689][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.689][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/indent.lua , size = 0.031 KB
+[18:30:10.690][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.690][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/xdefaults.lua , size = 0.031 KB
+[18:30:10.691][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.691][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/autoload/ccomplete.lua , size = 26.345 KB
+[18:30:10.708][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.708][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/calender.lua , size = 0.031 KB
+[18:30:10.708][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.708][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/ftplugin/d.lua , size = 0.031 KB
+[18:30:10.709][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.709][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/indent/query.lua , size = 0.135 KB
+[18:30:10.709][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.709][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/editorconfig.lua , size = 7.479 KB
+[18:30:10.712][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.712][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua , size = 8.781 KB
+[18:30:10.715][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.715][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/_fold.lua , size = 8.207 KB
+[18:30:10.719][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.719][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/_meta.lua , size = 2.839 KB
+[18:30:10.720][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.721][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/languagetree.lua , size = 27.647 KB
+[18:30:10.731][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.731][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/language.lua , size = 3.558 KB
+[18:30:10.744][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.744][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/_range.lua , size = 3.646 KB
+[18:30:10.748][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.748][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/health.lua , size = 0.888 KB
+[18:30:10.749][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.749][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/query.lua , size = 21.253 KB
+[18:30:10.777][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.777][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/secure.lua , size = 4.830 KB
+[18:30:10.780][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.780][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter/playground.lua , size = 12.562 KB
+[18:30:10.787][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.787][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/codelens.lua , size = 8.554 KB
+[18:30:10.797][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.797][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/_editor.lua , size = 29.364 KB
+[18:30:10.818][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.818][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/rpc.lua , size = 23.695 KB
+[18:30:10.827][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.827][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/protocol.lua , size = 28.367 KB
+[18:30:10.831][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.831][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/log.lua , size = 5.151 KB
+[18:30:10.843][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.843][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/handlers.lua , size = 23.587 KB
+[18:30:10.851][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.851][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua , size = 25.936 KB
+[18:30:10.859][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.859][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/buf.lua , size = 27.969 KB
+[18:30:10.867][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.867][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/_snippet.lua , size = 10.744 KB
+[18:30:10.872][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.872][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/sync.lua , size = 15.681 KB
+[18:30:10.876][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.876][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/types.lua , size = 0.924 KB
+[18:30:10.877][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.877][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/health.lua , size = 1.240 KB
+[18:30:10.878][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.878][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/tagfunc.lua , size = 2.339 KB
+[18:30:10.879][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.879][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/_watchfiles.lua , size = 9.692 KB
+[18:30:10.882][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.882][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/diagnostic.lua , size = 8.867 KB
+[18:30:10.886][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.886][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/keymap.lua , size = 3.573 KB
+[18:30:10.888][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.888][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/fs.lua , size = 10.702 KB
+[18:30:10.892][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.893][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/F.lua , size = 0.824 KB
+[18:30:10.893][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.893][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/highlight.lua , size = 3.749 KB
+[18:30:10.895][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.895][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/shared.lua , size = 22.292 KB
+[18:30:10.904][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.904][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp/util.lua , size = 70.764 KB
+[18:30:10.952][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.952][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/health.lua , size = 1.782 KB
+[18:30:10.953][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.953][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/filetype/options.lua , size = 2.561 KB
+[18:30:10.955][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.955][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/treesitter.lua , size = 15.225 KB
+[18:30:10.960][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.960][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/uri.lua , size = 3.376 KB
+[18:30:10.961][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.961][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/loader.lua , size = 16.182 KB
+[18:30:10.968][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.968][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/_options.lua , size = 12.261 KB
+[18:30:10.973][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.973][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/filetype/detect.lua , size = 47.659 KB
+[18:30:10.989][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.989][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/ui.lua , size = 3.672 KB
+[18:30:10.991][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.991][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/_init_packages.lua , size = 2.773 KB
+[18:30:10.992][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.992][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/inspect.lua , size = 8.864 KB
+[18:30:10.996][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:10.996][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/version.lua , size = 12.146 KB
+[18:30:11.000][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.000][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/diagnostic.lua , size = 56.640 KB
+[18:30:11.021][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.022][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/_inspector.lua , size = 7.915 KB
+[18:30:11.026][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.026][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/_watch.lua , size = 5.387 KB
+[18:30:11.028][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.028][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/filetype.lua , size = 74.400 KB
+[18:30:11.079][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.079][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/vim/lsp.lua , size = 82.377 KB
+[18:30:11.115][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.115][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/nvim/health.lua , size = 12.706 KB
+[18:30:11.119][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.120][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/man.lua , size = 25.082 KB
+[18:30:11.129][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.129][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/lua/_vim9script.lua , size = 15.439 KB
+[18:30:11.134][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.134][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/pack/dist/opt/cfilter/plugin/cfilter.lua , size = 3.266 KB
+[18:30:11.136][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.136][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///usr/share/nvim/runtime/filetype.lua , size = 1.613 KB
+[18:30:11.136][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///usr/share/nvim/runtime
+[18:30:11.136][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/ffi.lua , size = 2.529 KB
+[18:30:11.138][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/ffi.lua
+[18:30:11.138][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/vim.fn.1.lua , size = 163.758 KB
+[18:30:11.198][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.198][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/vim.lua , size = 0.927 KB
+[18:30:11.203][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.204][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/cmd.lua , size = 66.986 KB
+[18:30:11.245][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.245][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/options.lua , size = 200.093 KB
+[18:30:11.310][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.310][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/lua.lua , size = 11.346 KB
+[18:30:11.312][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.312][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/vim.fn.lua , size = 202.122 KB
+[18:30:11.359][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.359][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/alias.lua , size = 0.217 KB
+[18:30:11.359][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.360][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/options.2.lua , size = 200.253 KB
+[18:30:11.416][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.417][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/api.lua , size = 111.802 KB
+[18:30:11.441][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.441][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/options.3.lua , size = 108.403 KB
+[18:30:11.464][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.464][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/uv.lua , size = 130.354 KB
+[18:30:11.553][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.554][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/luv_thread_t.lua , size = 0.500 KB
+[18:30:11.554][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.554][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_req_t.lua , size = 0.705 KB
+[18:30:11.554][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.554][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_stream_t.lua , size = 5.906 KB
+[18:30:11.556][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.556][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_prepare_t.lua , size = 0.716 KB
+[18:30:11.557][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.557][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_timer_t.lua , size = 1.999 KB
+[18:30:11.557][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.557][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_fs_poll_t.lua , size = 1.140 KB
+[18:30:11.558][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.558][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_idle_t.lua , size = 1.074 KB
+[18:30:11.559][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.559][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_pipe_t.lua , size = 2.988 KB
+[18:30:11.560][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.560][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_process_t.lua , size = 0.617 KB
+[18:30:11.560][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.560][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_async_t.lua , size = 1.058 KB
+[18:30:11.561][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.561][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_poll_t.lua , size = 2.646 KB
+[18:30:11.561][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.561][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/types.lua , size = 17.131 KB
+[18:30:11.568][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.568][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_fs_event_t.lua , size = 1.033 KB
+[18:30:11.569][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.569][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/luv_dir_t.lua , size = 1.056 KB
+[18:30:11.569][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.569][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_handle_t.lua , size = 5.129 KB
+[18:30:11.571][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.571][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable/options.1.lua , size = 202.293 KB
+[18:30:11.619][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/site/pack/lazy/opt/neodev.nvim/types/stable
+[18:30:11.631][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_signal_t.lua , size = 2.997 KB
+[18:30:11.633][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.634][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/errors.lua , size = 15.165 KB
+[18:30:11.649][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.649][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_tcp_t.lua , size = 3.923 KB
+[18:30:11.654][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.654][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/luv_work_ctx_t.lua , size = 0.530 KB
+[18:30:11.654][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.654][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_check_t.lua , size = 0.694 KB
+[18:30:11.656][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.656][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_tty_t.lua , size = 1.135 KB
+[18:30:11.659][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.659][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv_udp_t.lua , size = 5.970 KB
+[18:30:11.663][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.663][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/io.lua , size = 6.364 KB
+[18:30:11.668][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/io.lua
+[18:30:11.668][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/utils/installer/config.example.lua , size = 0.251 KB
+[18:30:11.669][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.669][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/utils/installer/config_win.example.lua , size = 0.924 KB
+[18:30:11.669][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.669][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/utils/ci/generate_new_lockfile.lua , size = 2.878 KB
+[18:30:11.673][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.673][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/utils/ci/verify_plugins.lua , size = 3.766 KB
+[18:30:11.677][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.677][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/bootstrap.lua , size = 3.627 KB
+[18:30:11.681][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.681][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library/uv.lua , size = 98.128 KB
+[18:30:11.752][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/3rd/luv/library
+[18:30:11.752][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils.lua , size = 3.809 KB
+[18:30:11.757][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.757][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/config/settings.lua , size = 4.734 KB
+[18:30:11.760][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.760][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/config/defaults.lua , size = 1.842 KB
+[18:30:11.762][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.762][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/config/_deprecated.lua , size = 4.823 KB
+[18:30:11.767][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.767][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/utils.lua , size = 5.162 KB
+[18:30:11.777][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.777][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/null-ls/services.lua , size = 3.184 KB
+[18:30:11.780][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.780][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/null-ls/formatters.lua , size = 0.841 KB
+[18:30:11.781][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.781][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/null-ls/linters.lua , size = 1.088 KB
+[18:30:11.782][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.782][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/null-ls/init.lua , size = 0.360 KB
+[18:30:11.782][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.782][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/config/init.lua , size = 2.936 KB
+[18:30:11.785][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.785][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/null-ls/code_actions.lua , size = 0.631 KB
+[18:30:11.786][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.786][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/config.lua , size = 3.211 KB
+[18:30:11.788][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.788][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/providers/tailwindcss.lua , size = 0.292 KB
+[18:30:11.788][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.788][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/providers/jsonls.lua , size = 0.294 KB
+[18:30:11.788][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.788][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/providers/vuels.lua , size = 0.624 KB
+[18:30:11.789][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.789][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/providers/lua_ls.lua , size = 1.676 KB
+[18:30:11.790][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.790][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/providers/yamlls.lua , size = 0.307 KB
+[18:30:11.791][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.791][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/init.lua , size = 3.387 KB
+[18:30:11.793][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.793][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/templates.lua , size = 2.685 KB
+[18:30:11.794][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.794][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/lsp/manager.lua , size = 5.385 KB
+[18:30:11.796][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.796][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/plugin-loader.lua , size = 4.038 KB
+[18:30:11.797][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.797][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/icons.lua , size = 3.238 KB
+[18:30:11.798][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.798][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils/table.lua , size = 0.698 KB
+[18:30:11.799][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.799][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils/functions.lua , size = 0.258 KB
+[18:30:11.799][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.799][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils/modules.lua , size = 2.971 KB
+[18:30:11.800][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.800][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils/git.lua , size = 3.752 KB
+[18:30:11.802][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.802][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/keymappings.lua , size = 4.851 KB
+[18:30:11.804][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.805][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/utils/hooks.lua , size = 2.145 KB
+[18:30:11.806][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.806][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/terminal.lua , size = 5.538 KB
+[18:30:11.808][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.808][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/breadcrumbs.lua , size = 5.967 KB
+[18:30:11.810][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.810][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/autopairs.lua , size = 2.644 KB
+[18:30:11.811][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.811][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/indentlines.lua , size = 0.924 KB
+[18:30:11.812][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.812][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/alpha/startify.lua , size = 0.913 KB
+[18:30:11.812][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.812][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/commands.lua , size = 2.193 KB
+[18:30:11.813][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.813][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/alpha/dashboard.lua , size = 13.014 KB
+[18:30:11.814][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.814][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/log.lua , size = 5.113 KB
+[18:30:11.816][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.816][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/info.lua , size = 7.034 KB
+[18:30:11.819][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.819][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lir.lua , size = 2.833 KB
+[18:30:11.821][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.821][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/nvimtree.lua , size = 8.196 KB
+[18:30:11.823][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.823][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/project.lua , size = 2.068 KB
+[18:30:11.824][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.824][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/theme.lua , size = 3.250 KB
+[18:30:11.826][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.826][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/which-key.lua , size = 13.770 KB
+[18:30:11.830][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.830][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/bufferline.lua , size = 7.602 KB
+[18:30:11.833][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.833][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/utils.lua , size = 0.222 KB
+[18:30:11.833][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.833][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/conditions.lua , size = 0.451 KB
+[18:30:11.833][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.833][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/components.lua , size = 4.718 KB
+[18:30:11.835][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.835][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/styles.lua , size = 3.575 KB
+[18:30:11.837][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.837][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/colors.lua , size = 0.278 KB
+[18:30:11.837][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.837][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/dap.lua , size = 4.631 KB
+[18:30:11.839][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.839][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/lualine/init.lua , size = 1.193 KB
+[18:30:11.840][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.840][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/gitsigns.lua , size = 2.184 KB
+[18:30:11.840][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.840][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/builtins/init.lua , size = 0.648 KB
+[18:30:11.841][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.841][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/mason.lua , size = 3.599 KB
+[18:30:11.842][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.842][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/treesitter.lua , size = 3.845 KB
+[18:30:11.843][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.843][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/comment.lua , size = 2.182 KB
+[18:30:11.844][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.844][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/cmp.lua , size = 11.183 KB
+[18:30:11.848][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.848][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/autocmds.lua , size = 8.020 KB
+[18:30:11.851][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.851][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/alpha.lua , size = 2.604 KB
+[18:30:11.852][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.852][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/illuminate.lua , size = 2.384 KB
+[18:30:11.853][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.853][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/telescope.lua , size = 4.286 KB
+[18:30:11.854][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.855][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/plugins.lua , size = 9.760 KB
+[18:30:11.858][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.858][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/core/telescope/custom-finders.lua , size = 2.848 KB
+[18:30:11.859][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.859][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/interface/text.lua , size = 2.467 KB
+[18:30:11.860][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.860][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/lua/lvim/interface/popup.lua , size = 1.991 KB
+[18:30:11.861][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.861][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/init.lua , size = 0.616 KB
+[18:30:11.862][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.862][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/minimal_init.lua , size = 0.393 KB
+[18:30:11.862][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.862][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/lvim/helpers.lua , size = 0.982 KB
+[18:30:11.863][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.863][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/minimal_lsp.lua , size = 3.675 KB
+[18:30:11.864][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.864][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/specs/bootstrap_spec.lua , size = 1.503 KB
+[18:30:11.865][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.865][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/specs/lsp_spec.lua , size = 2.777 KB
+[18:30:11.868][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.868][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/specs/config_loader_spec.lua , size = 1.905 KB
+[18:30:11.870][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.971][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lunarvim/lvim/tests/specs/plugins_load_spec.lua , size = 0.941 KB
+[18:30:11.975][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lunarvim/lvim
+[18:30:11.975][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/new.lua , size = 0.642 KB
+[18:30:11.977][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table/new.lua
+[18:30:11.977][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/util.lua , size = 1.984 KB
+[18:30:11.983][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/util.lua
+[18:30:11.983][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/profile.lua , size = 0.348 KB
+[18:30:11.986][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/jit/profile.lua
+[18:30:11.986][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/package.lua , size = 2.699 KB
+[18:30:11.992][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/package.lua
+[18:30:11.992][info] [#0:script/workspace/loading.lua:101]: Preload file at: file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table.lua , size = 4.230 KB
+[18:30:11.999][info] [#0:script/workspace/loading.lua:113]: ++++As library of:	file:///home/hilbert-nunes/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/LuaJIT%20en-us%20utf8/table.lua
+[18:30:12.104][info] [#0:script/workspace/loading.lua:173]: Loaded files takes [1.332] sec: <fallback>
+[18:30:12.104][info] [#0:script/workspace/loading.lua:182]: Compile files takes [0.000] sec: <fallback>
+[18:30:12.104][info] [#0:script/workspace/loading.lua:183]: Loaded finish:	<fallback>
+[18:30:12.104][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	<fallback>
+[18:30:12.165][warn] [#0:script/proto/proto.lua:190]: Method [textDocument/didOpen] takes [1.524]sec. {
+  jsonrpc = "2.0",
+  method = "textDocument/didOpen",
+  params = {
+    textDocument = {
+      languageId = "lua",
+      text = '"***"',
+      uri = "file:///home/hilbert-nunes/.config/lvim/config.lua",
+      version = 0
+    }
+  }
+}
+[18:30:12.167][warn] [#0:script/proto/proto.lua:190]: Method [textDocument/documentSymbol] takes [1.525]sec. {
+  id = 2,
+  jsonrpc = "2.0",
+  method = "textDocument/documentSymbol",
+  params = {
+    textDocument = {
+      uri = "file:///home/hilbert-nunes/.config/lvim/config.lua"
+    }
+  }
+}
+[18:30:12.168][warn] [#0:script/proto/proto.lua:190]: Method [textDocument/documentSymbol] takes [1.466]sec. {
+  id = 7,
+  jsonrpc = "2.0",
+  method = "textDocument/documentSymbol",
+  params = {
+    textDocument = {
+      uri = "file:///home/hilbert-nunes/.config/lvim/config.lua"
+    }
+  }
+}
+[18:30:12.168][warn] [#0:script/proto/proto.lua:190]: Method [textDocument/semanticTokens/full] takes [1.467]sec. {
+  id = 6,
+  jsonrpc = "2.0",
+  method = "textDocument/semanticTokens/full",
+  params = {
+    textDocument = {
+      uri = "file:///home/hilbert-nunes/.config/lvim/config.lua"
+    }
+  }
+}
+[18:30:36.648][error][#0:script/text-merger.lua:72]: NMD, WSM `endLine > #rows` ?
+stack traceback:
+	script/text-merger.lua:72: in upvalue 'mergeRows'
+	script/text-merger.lua:106: in function 'text-merger'
+	script/provider/provider.lua:305: in function <script/provider/provider.lua:294>
+	[C]: in function 'xpcall'
+	script/proto/proto.lua:203: in function <script/proto/proto.lua:178>
+[18:30:45.831][warn] [#0:script/provider/provider.lua:625]: Completion takes 0.137 sec.
+[18:30:47.878][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///home/hilbert-nunes/.config/lvim/config.lua
+[18:31:00.737][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///home/hilbert-nunes/.config/lvim/config.lua
+[18:31:08.519][info] [#0:script/provider/provider.lua:169]: Server shutdown.
+[18:31:08.519][warn] [#0:script/pub/report.lua:25]: Load proto error:	Disconnected!

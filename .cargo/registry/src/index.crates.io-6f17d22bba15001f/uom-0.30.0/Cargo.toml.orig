@@ -1,0 +1,95 @@
+[package]
+name = "uom"
+version = "0.30.0"
+edition = "2018"
+authors = ["Mike Boutin <mike.boutin@gmail.com>"]
+description = "Units of measurement"
+documentation = "https://docs.rs/uom"
+#homepage = ""
+repository = "https://github.com/iliekturtles/uom"
+readme = "README.md"
+keywords = ["units", "measurement", "SI", "dimensional-analysis", "no_std"]
+categories = ["no-std", "science", "value-formatting"]
+license = "Apache-2.0/MIT"
+autobins = true
+autoexamples = true
+autotests = true
+autobenches = true
+
+[package.metadata.docs.rs]
+all-features = true
+
+[badges]
+travis-ci = { repository = "iliekturtles/uom" }
+coveralls = { repository = "iliekturtles/uom" }
+maintenance = { status = "actively-developed" }
+
+[workspace]
+members = [
+    "tests/feature_check",
+    "uom-macros",
+    "tests/edition_check",
+]
+
+[dependencies]
+num-traits = { version = "0.2", default-features = false }
+num-rational = { version = "0.3", optional = true, default-features = false }
+num-bigint = { version = "0.3", optional = true, default-features = false, features = ["std"] }
+serde = { version = "1.0", optional = true, default-features = false }
+typenum = "1.9"
+
+[dev-dependencies]
+approx = "0.3"
+quickcheck = "0.9.2"
+serde_json = "1.0"
+static_assertions = "1.1"
+
+[features]
+default = ["autoconvert", "f32", "f64", "si", "std"]
+autoconvert = []
+usize = ["rational-support"]
+u8 = ["rational-support"]
+u16 = ["rational-support"]
+u32 = ["rational-support"]
+u64 = ["rational-support"]
+u128 = ["rational-support"]
+isize = ["rational-support"]
+i8 = ["rational-support"]
+i16 = ["rational-support"]
+i32 = ["rational-support"]
+i64 = ["rational-support"]
+i128 = ["rational-support"]
+bigint = ["bigint-support"]
+biguint = ["bigint-support"]
+rational = ["rational-support"]
+rational32 = ["rational-support"]
+rational64 = ["rational-support"]
+bigrational = ["bigint-support"]
+f32 = []
+f64 = []
+si = []
+std = ["num-traits/std"]
+# The `try-from` feature provides `impl TryFrom<Time> for Duration` and `impl TryFrom<Duration> for
+# Time`. The `TryFrom` trait was stabilized in Rust 1.34.0 and will cause uom to fail to compile if
+# enabled with an earlier version of Rust.
+try-from = []
+# The `use_serde` feature exists so that, in the future, other dependency features like num/serde
+# can be added. However, num/serde is currently left out because it has not yet been updated to
+# Serde 1.0. It is also necessary to name the feature something other than `serde` because of a
+# cargo bug: https://github.com/rust-lang/cargo/issues/1286
+use_serde = ["serde"]
+# Internal features to include appropriate num-* crates.
+rational-support = ["num-rational"]
+bigint-support = ["num-bigint", "num-rational/num-bigint-std"]
+
+[[example]]
+name = "base"
+required-features = ["autoconvert", "f32", "si"]
+
+[[example]]
+name = "mks"
+required-features = ["f32"]
+
+[[example]]
+name = "si"
+required-features = ["f32", "si"]

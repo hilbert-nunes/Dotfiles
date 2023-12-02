@@ -1,0 +1,114 @@
+[package]
+name = "isahc"
+version = "0.9.14"
+description = "The practical HTTP client that is fun to use."
+authors = ["Stephen M. Coakley <me@stephencoakley.com>"]
+license = "MIT"
+keywords = ["http", "request", "client", "async", "curl"]
+categories = ["web-programming::http-client"]
+repository = "https://github.com/sagebind/isahc"
+documentation = "https://docs.rs/isahc/"
+readme = "README.md"
+edition = "2018"
+exclude = [".*", "benchmarks", "media", "src/cookies/psl/list/*/"]
+
+[package.metadata.docs.rs]
+features = ["cookies", "json"]
+
+[badges.maintenance]
+status = "actively-developed"
+
+[features]
+default = ["http2", "static-curl", "text-decoding"]
+cookies = ["chrono"]
+http2 = ["curl/http2"]
+json = ["serde", "serde_json"]
+psl = ["parking_lot", "publicsuffix"]
+spnego = ["curl-sys/spnego"]
+static-curl = ["curl/static-curl"]
+static-ssl = ["curl/static-ssl"]
+text-decoding = ["encoding_rs", "mime"]
+unstable-interceptors = []
+
+[dependencies]
+bytes = "0.5"
+crossbeam-utils = "0.8"
+curl = "0.4.34"
+curl-sys = "0.4.37"
+futures-lite = "1.11"
+http = "0.2.1"
+log = "0.4"
+once_cell = "1"
+slab = "0.4"
+sluice = "0.5"
+url = "2.2"
+waker-fn = "1"
+
+[dependencies.chrono]
+version = "0.4"
+optional = true
+
+[dependencies.encoding_rs]
+version = "0.8"
+optional = true
+
+[dependencies.flume]
+version = "0.9"
+default-features = false
+features = ["async"]
+
+[dependencies.mime]
+version = "0.3"
+optional = true
+
+[dependencies.parking_lot]
+version = "0.11"
+optional = true
+
+[dependencies.publicsuffix]
+version = "1.5"
+default-features = false
+optional = true
+
+[dependencies.serde]
+version = "1.0"
+optional = true
+
+[dependencies.serde_json]
+version = "1.0"
+optional = true
+
+[dependencies.tracing]
+version = "0.1.17"
+features = ["log"]
+
+[dependencies.tracing-futures]
+version = "0.2"
+default-features = false
+features = ["std", "std-future"]
+
+[dev-dependencies]
+env_logger = "0.8"
+flate2 = "1.0"
+futures = "0.3"
+indicatif = "0.15"
+rayon = "1"
+static_assertions = "1.1"
+structopt = "0.3"
+tempfile = "3.1"
+test-case = "1.0"
+tracing-subscriber = "0.2"
+
+[dev-dependencies.testserver]
+path = "testserver"
+
+[[example]]
+name = "cookies"
+required-features = ["cookies"]
+
+[[example]]
+name = "json"
+required-features = ["json", "serde/derive"]
+
+[workspace]
+members = ["benchmarks", "testserver"]

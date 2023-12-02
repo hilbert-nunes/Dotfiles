@@ -1,0 +1,11 @@
+{
+	"zsh-theme-powerlevel10k-git": {
+		"github.com/romkatv/powerlevel10k.git": {
+			"protocols": [
+				"https"
+			],
+			"branch": "HEAD",
+			"sha": "7fd76370f53f87f956c811766a452c83ced4014b"
+		}
+	}
+}

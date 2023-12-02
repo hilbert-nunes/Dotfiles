@@ -1,0 +1,11 @@
+[package]
+
+name = "typemap-ors"
+version = "1.0.0"
+authors = ["Jonathan Reem <jonathan.reem@gmail.com>", "Anton Whalley anton@venshare.com"]
+license = "MIT"
+description = "A typesafe store for many value types."
+repository = "https://github.com/orphanage-rs/rust-typemap"
+
+[dependencies]
+unsafe-any-ors = "1.0.0"

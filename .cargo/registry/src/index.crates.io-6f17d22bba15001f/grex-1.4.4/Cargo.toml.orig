@@ -1,0 +1,75 @@
+# Copyright © 2019-today Peter M. Stahl pemistahl@gmail.com
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[package]
+name = "grex"
+version = "1.4.4"
+authors = ["Peter M. Stahl <pemistahl@gmail.com>"]
+description = """
+grex generates regular expressions from user-provided test cases.
+"""
+homepage = "https://github.com/pemistahl/grex"
+repository = "https://github.com/pemistahl/grex"
+documentation = "https://docs.rs/grex"
+license = "Apache-2.0"
+readme = "README.md"
+edition = "2021"
+categories = ["command-line-utilities", "parsing"]
+keywords = ["pattern", "regex", "regexp"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+itertools = "0.11.0"
+lazy_static = "1.4.0"
+ndarray = "0.15.6"
+petgraph = {version = "0.6.4", default-features = false, features = ["stable_graph"]}
+pyo3 = { version = "0.19.2", optional = true }
+regex = "1.9.3"
+unic-char-range = "0.9.0"
+unic-ucd-category = "0.9.0"
+unicode-segmentation = "1.10.1"
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+clap = { version = "4.3.24", features = ["derive", "wrap_help"], optional = true }
+
+[target.'cfg(target_family = "wasm")'.dependencies]
+wasm-bindgen = "0.2.87"
+
+[dev-dependencies]
+indoc = "2.0.3"
+rstest = "0.18.2"
+
+[target.'cfg(not(target_family = "wasm"))'.dev-dependencies]
+assert_cmd = "2.0.12"
+criterion = "0.5.1"
+predicates = "3.0.3"
+proptest = "1.2.0"
+tempfile = "3.8.0"
+
+[target.'cfg(target_family = "wasm")'.dev-dependencies]
+wasm-bindgen-test = "0.3.37"
+
+[features]
+default = ["cli"]
+cli = ["clap"]
+python = ["pyo3"]
+
+[[bench]]
+name = "benchmark"
+harness = false
+
+[profile.bench]
+debug = true
